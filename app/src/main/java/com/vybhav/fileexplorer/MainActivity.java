@@ -27,9 +27,10 @@ public class MainActivity extends AppCompatActivity {
         initImageBitmaps();
     }
 
-    private void initImageBitmaps(){
+    private void initImageBitmaps() {
         Log.d(TAG, "initImageBitmaps: preparing bitmaps.");
 
+        
         mImageUrls.add("https://c1.staticflickr.com/5/4636/25316407448_de5fbf183d_o.jpg");
         mNames.add("Havasu Falls");
 
@@ -63,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void initRecyclerView(){
+    private void initRecyclerView() {
         Log.d(TAG, "initRecyclerView: initializing staggered recyclerview.");
 
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
