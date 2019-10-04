@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
@@ -30,7 +31,7 @@ public class StaggeredRecyclerViewAdapter extends RecyclerView.Adapter<Staggered
         mContext = context;
     }
 
-    @Override
+    @Override @NonNull
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_grid_item, parent, false);
         return new ViewHolder(view);
@@ -65,7 +66,7 @@ public class StaggeredRecyclerViewAdapter extends RecyclerView.Adapter<Staggered
         return mImageUrls.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder {
 
         ImageView image;
         TextView name;
